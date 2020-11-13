@@ -44,7 +44,17 @@ p{
 	
 }
 #strana1{
+
 	display: flex;
+	
+	
+}
+footer{
+	background-color: #A2B964;
+	text-align: center;
+	
+	
+	
 }
 
 h1{
@@ -56,12 +66,41 @@ h1{
 }
 #desnaStrana{
 	flex: 1;
-
+	background-color: #A2B964;
 
 }
 #levaStrana{
 	flex: 9;
+	display: flex;
+	flex-direction: column;
+	
+	
+}
+.quotebubble{
+	font-size: 13pt;
+	font-family: Georgia;
+	background-color: #FFFFFF;
+	width: 90%;
+	border: 2px solid #CCCCCC;
+	border-radius: 12px;
+	padding: 1em;
+	margin-left: 2%;
+	
+
+	
+
+}
+	
+.quotebubble > img{
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: left;
 }
 
+#w3c{
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+}
 
 
