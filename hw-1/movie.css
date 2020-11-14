@@ -97,6 +97,27 @@ h1{
 	float: left;
 }
 
+p:not(.quotebubble){
+	font-size: 13pt;
+	margin-left: 2%;
+	
+}
+p:not(.quotebubble) > img{
+	float:left;
+	margin-right: 5px;
+}
+.publication{
+	font-style: italic;
+}
+dt{
+	font-weight: bold;
+	margin-top: 15px;
+}
+dl{
+	padding: 15px;
+	font-size: 12pt;
+	font-family: Arial;
+}
 #w3c{
 	position: absolute;
 	bottom: 2px;
