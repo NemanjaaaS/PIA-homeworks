@@ -1,0 +1,127 @@
+body{
+	margin:none;
+	padding: none;
+	background-image: url("images/background.png");
+	position: relative;
+	min-width: 1100px;
+
+}
+p{
+	font-size: 12pt;
+	font-family: Arial;
+	
+}
+#s1{
+	font-size: 48pt;
+	color: red;
+	font-family: Arial;
+	font-weight: bold;
+	position: absolute;
+    top: 10%;
+    left: 130px;
+	
+    
+	
+	
+}
+#grad1{
+	background-image: url("images/rbg.png");
+	height: 83px;
+	position:relative;
+	overflow: hidden;
+	margin-bottom: 1em;
+	
+	
+	
+}
+#sve{
+	width: 55%;
+	outline: 5px solid gray;
+	background-color: #EEEEEE;
+	outline-offset: 5px;
+	margin: auto;
+	overflow: hidden;
+	
+}
+#strana1{
+
+	display: flex;
+	
+	
+}
+footer{
+	background-color: #A2B964;
+	text-align: center;
+	
+	
+	
+}
+
+h1{
+	font-size: 24pt;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 3px 3px #999999;
+}
+#desnaStrana{
+	flex: 1;
+	background-color: #A2B964;
+
+}
+#levaStrana{
+	flex: 9;
+	display: flex;
+	flex-direction: column;
+	
+	
+}
+.quotebubble{
+	font-size: 13pt;
+	font-family: Georgia;
+	background-color: #FFFFFF;
+	width: 90%;
+	border: 2px solid #CCCCCC;
+	border-radius: 12px;
+	padding: 1em;
+	margin-left: 2%;
+	
+
+	
+
+}
+	
+.quotebubble > img{
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+p:not(.quotebubble){
+	font-size: 13pt;
+	margin-left: 2%;
+	
+}
+p:not(.quotebubble) > img{
+	float:left;
+	margin-right: 5px;
+}
+.publication{
+	font-style: italic;
+}
+dt{
+	font-weight: bold;
+	margin-top: 15px;
+}
+dl{
+	padding: 15px;
+	font-size: 12pt;
+	font-family: Arial;
+}
+#w3c{
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+}
+
+
