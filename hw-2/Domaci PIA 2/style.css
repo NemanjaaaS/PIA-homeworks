@@ -1,18 +1,39 @@
-/*.navbar{
+.navbar{
 	background-color:#e3df10 !important;
 }
-*/
+
 .navbar .navbar-brand{
 	font-weight: bold;
 }
-/*body{
+body{
 	background-color:#151515 !important;
 	background-size: 100%;
-} */
+}
 .oNama{
 	font-size: 12pt;
 	font-family: Times New Roman;
 	
+}
+.drMreze a{
+	font-size: 4.5em;
+	padding: 4rem;
+	
+	
+}
+.fa-facebook{
+	color: #3b5998;
+	
+}
+.fa-twitter{
+	color: #3273a8 ;
+}
+.fa-instagram{
+	color: #ad4b9f;
+}
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+	color: #ebebeb;
 }
 
 
