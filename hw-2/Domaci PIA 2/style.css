@@ -1,3 +1,9 @@
+body{
+	background-image: url(img/269.jpg);
+		background-size: 100%;
+}
+
+
 .navbar{
 	background-color:#e3df10 !important;
 }
@@ -5,12 +11,9 @@
 .navbar .navbar-brand{
 	font-weight: bold;
 }
-body{
-	background-color:#151515 !important;
-	background-size: 100%;
-}
+
 .oNama{
-	font-size: 12pt;
+	font-size: 13pt;
 	font-family: Times New Roman;
 	
 }
@@ -35,5 +38,10 @@ body{
 .fa-instagram:hover {
 	color: #ebebeb;
 }
+#Meni p{
+	font-size: 14pt;
+	font-family: Arial;
+	font-style: italic;
 
+}
 
