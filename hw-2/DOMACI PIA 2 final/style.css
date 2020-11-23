@@ -1,0 +1,48 @@
+body{
+	background-image: url(img/269.jpg);
+		background-size: 100%;
+}
+
+
+.navbar{
+	background-color:#e3df10;
+}
+
+.oNama{
+	font-size: 13pt;
+	font-family: Times New Roman;
+	
+}
+.naslov h1{
+	font-family: Grumpy;
+}
+.drMreze a{
+	font-size: 4.5em;
+	padding: 4rem;
+	
+	
+}
+.fa-facebook{
+	color: #3b5998;
+	
+}
+.fa-twitter{
+	color: #3273a8 ;
+}
+.fa-instagram{
+	color: #ad4b9f;
+}
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+	color: #ebebeb;
+}
+#Meni p{
+	font-size: 14pt;
+	font-family: Arial;
+	font-style: italic;
+
+}
+
+
+
