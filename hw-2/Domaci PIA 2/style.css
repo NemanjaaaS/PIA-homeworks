@@ -5,17 +5,16 @@ body{
 
 
 .navbar{
-	background-color:#e3df10 !important;
-}
-
-.navbar .navbar-brand{
-	font-weight: bold;
+	background-color:#e3df10;
 }
 
 .oNama{
 	font-size: 13pt;
 	font-family: Times New Roman;
 	
+}
+.naslov h1{
+	font-family: Grumpy;
 }
 .drMreze a{
 	font-size: 4.5em;
@@ -44,4 +43,6 @@ body{
 	font-style: italic;
 
 }
+
+
 
