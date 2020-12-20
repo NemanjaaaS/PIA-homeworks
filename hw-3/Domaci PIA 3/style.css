@@ -57,3 +57,59 @@ input{
   
 }
 
+.instruction-box{
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+	width: 600px;
+	background-color: whitesmoke;
+    margin:auto;
+    border-radius: 5%;
+    padding:2rem;
+    text-align: center;
+    margin-top: 20px;
+	
+	opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease
+	
+	
+}
+.instruction-box p{
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.instruction-box p span{
+  color:red;
+}
+.instruction-box p strong{
+  font-size: 22px;
+}
+
+.instruction-box button{
+  padding: 15px 45px;
+  font-size: 20px;
+  background-color: #2b2b2b;
+  color:whitesmoke;
+  font-family: 'DM Serif Text', serif;
+  border-radius: 5%;
+
+}
+.instruction-box button:hover{
+cursor: pointer;
+}
+.instruction-box.activeInfo{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.home-box.hideHome{
+	opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease
+}
