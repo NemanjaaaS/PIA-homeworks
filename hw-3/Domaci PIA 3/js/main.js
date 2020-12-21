@@ -2,6 +2,7 @@ const next_btn = document.querySelector(".home-box button");
 const info_box = document.querySelector(".instruction-box");
 const home_box = document.querySelector(".home-box");
 const start_btn = document.querySelector(".instruction-box button");
+const que_box = document.querySelector(".question-box");
 
 
 
@@ -13,6 +14,7 @@ next_btn.onclick = ()=>{
 
 start_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo");
+    que_box.classList.add("activeQue");
 }
 
 
