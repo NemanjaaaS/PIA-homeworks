@@ -15,7 +15,7 @@
   
   
     <h4>Enter your name:</h4>
-    <input type="text" id="username" placeholder="Name"> <br>
+    <input type="text" id="username" placeholder="Name" required> <br>
     <button>Next</button>
  
   
@@ -36,34 +36,56 @@
 </div>
 
 <div class="question-box">
-  <header>
+    <header>
 
-    <div class="timer">
-      <div class="timeLeft">Time left</div>
-      <div class="timerSec">20</div>
-    </div>
-    
-  </header>
-  <section>
-    <div class="que">
-     <!-- Ovde ubacujemo pitanja -->
-    </div>
-    <div class="answ">
-      <!-- Ovde ubacujemo odgovore -->
-     </div>
+      <div class="timer">
+        <div class="timeLeft">Time left</div>
+        <div class="timerSec">20</div>
+      </div>
+      
+    </header>
+    <section>
+      <div class="que">
+       <!-- Ovde ubacujemo pitanja -->
+      </div>
+      <div class="answ">
+        <!-- Ovde ubacujemo odgovore -->
+       </div>
 
-  </section>
+    </section>
 
-  <footer>
-    <div class="totalQue">
-      <!--ubacujemo broj pitanja-->
-    </div>
-    <button>Next Question</button>
-  </footer>
+    <footer>
+      <div class="totalQue">
+        <!--ubacujemo broj pitanja-->
+      </div>
+      <button class="Quit">Quit</button>
+      <button class="nextQue">Next Question</button>
+    </footer>
 
 </div>
 
+<div class="end-box">
 
+  <h1>Your score is:</h1>
+  <div class="score">
+      <!-- Skor iz JavaScript -->
+  </div>
+  
+    <button class="playAgain">Play again</button>
+    <button class="Scoreboard">Scoreboard</button>
+  
+</div>
+
+<div class="score-box">
+  <div class="pName">
+    <!--ovde ubacujemo imena igraca-->
+  </div>
+
+  <div class="pScore">
+    <!--ovde ubacujemo skor igraca-->
+  </div>
+  <button class="playAgain">Play again</button>
+</div>
 
 
 <script src="js/main.js"></script>

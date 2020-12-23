@@ -1,0 +1,99 @@
+[
+    {
+    "num": 1,
+    "question": "In children’s stories, how many wishes are granted by a genie or fairy?",
+    "answer": "Three",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ]
+  },
+    {
+    "num": 2,
+    "question": "Which legal document states a person’s wishes regarding the disposal of their property after death?",
+    "answer": "Will",
+    "options": [
+      "Would",
+      "Shall",
+      "Will",
+      "Should"
+    ]
+  },
+    {
+    "num": 3,
+    "question": " Which of these phrases refers to a brief success?",
+    "answer": "Flash in the pan",
+    "options": [
+      "Blaze in the pot",
+      "Spark in the tub",
+      "Flare in the jug",
+      "Flash in the pan"
+    ]
+  },
+    {
+    "num": 4,
+    "question": "What country has the most islands in the world?",
+    "answer": "Sweden",
+    "options": [
+      "Finland",
+      "Sweden",
+      "Norway",
+      "Philippines"
+    ]
+  },
+    {
+    "num": 5,
+    "question": "What’s the smallest country in the world?",
+    "answer": "Vatican",
+    "options": [
+      "Vatican",
+      "Monaco",
+      "Bangladesh",
+      "Liberia"
+    ]
+  },
+  {
+    "num": 6,
+    "question": "The largest island in the world?",
+    "answer": "Greenland"
+
+    
+  },
+  {
+    "num": 7,
+    "question": "How many time zones are there in Russia?",
+    "answer": "11",
+    "options": [
+      "4",
+      "9",
+      "7",
+      "11"
+    ]
+  },
+  {
+    "num": 8,
+    "question": "What is the dogs name from Garfield?",
+    "answer": "Odie"
+  },
+  {
+    "num": 9,
+    "question": "What are the 10 countries with the largest population?",
+    "answer": "USA"
+
+  },
+  {
+    "num": 10,
+    "question": "Which language has the most words (according to dictionary entries)?",
+    "answer": "English",
+    "options": [
+      "Russian",
+      "Chinese",
+      "English",
+      "Italian"
+    ]
+  }
+  
+
+]
