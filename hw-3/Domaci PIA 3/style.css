@@ -342,6 +342,9 @@ opacity: 0;
   font-family: 'DM Serif Text', serif;
   border-radius: 5%;
 }
+.end-box .Scoreboard:hover{
+  cursor: pointer;
+}
 
 
 
@@ -415,3 +418,10 @@ opacity: 0;
   border-radius: 5%;
  
  }
+ .score-box .playAgain:hover{
+   cursor: pointer;
+ }
+ 
+ .end-box .playAgain:hover{
+  cursor: pointer;
+}
