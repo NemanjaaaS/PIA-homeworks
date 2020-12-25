@@ -32,11 +32,11 @@ start_btn.onclick = ()=>{
 }
 
 
-let que_count = 0;
-let que_num = 1;
-let userScore = 0;
-let counter;
-let questions;
+let que_count = 0;  //brojac pitanja
+let que_num = 1;    //broj pitanja
+let userScore = 0;  //skor igraca koji se inkrementuje ako je odgovor tacan
+let counter;    //brojac
+let questions;  //promenjiva za pitanja
 
 fetch('questions.json')
   .then(response => response.json())
@@ -67,13 +67,14 @@ quit_btn.onclick = ()=>{
     showEnd();
 
 }
-//finkcija za pokazivanje sledeceg pitanja
+//finkcija za pokazivanja pitanja
 function showQuetions(index){
     
     const que_text = document.querySelector(".que");
 
     //kreiramo nove spanove i divove za pitanja i ponudjene odgovore preko indeksa
     let que_tag = '<span>'+ questions[index].num + ". " + questions[index].question +'</span>';
+    //ako je pitanje za koje treba da se ukuca tacan odgovor
     if(questions[index].options==undefined){
         que_text.innerHTML = que_tag;
         option_list.innerHTML = `<input class="answInput" type="text"><button class="Submit">Submit</button>`;
@@ -90,6 +91,7 @@ function showQuetions(index){
 
         }
     }
+    //ukoliko je pitanje sa ponudjenim odgovorima
     else{
         let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
         + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
@@ -142,7 +144,7 @@ function optionSelected(answer){
     show_Next_Que(3);
     
 }
-
+//funkcija koja odbrojava vreme za ucitanje novog pitanja posle odgovora ili isteka vremena
 function show_Next_Que(time){
     
     counter = setInterval(timer, 1000);
@@ -193,7 +195,7 @@ function show_Next_Que(time){
 
 
 
-
+//funkcija za prikaz poslednjeg bloka (Skor)
 
 function showEnd(){
     
@@ -205,7 +207,7 @@ function showEnd(){
 
 
 }
-
+//funkcija pomocu koje se zapocinje tajmer za svako pitanje
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
@@ -234,7 +236,7 @@ function startTimer(time){
 }
 
 
-
+//dugme koje ako je pritisnuto prikazuje pocetni ekran
 play_again_btn.onclick=()=>{
     end_box.classList.remove("activeEnd");
     home_box.classList.remove("hideHome");
