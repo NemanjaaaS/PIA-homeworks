@@ -9,9 +9,7 @@ const option_list = document.querySelector(".answ");
 const timeText = document.querySelector(".timer .timeLeft");
 const timeCount = document.querySelector(".timer .timerSec");
 const end_box = document.querySelector(".end-box");
-const score_btn = document.querySelector(".end-box .Scoreboard");
-const score_box = document.querySelector(".score-box")
-const again_btn = document.querySelector(".score-box .playAgain")
+
 const play_again_btn = document.querySelector(".end-box .playAgain");
 
 
@@ -205,10 +203,6 @@ function showEnd(){
     let scoreTag = '<p>'+ userScore +'</p>'
     scoreEnd.innerHTML = scoreTag; 
 
-    let inputName = document.querySelector(".home-box input").value;
-    score_board.ime = inputName;
-    score_board.skor = userScore;
-    score_list.push({score_board});
 
 }
 
@@ -239,40 +233,9 @@ function startTimer(time){
     }
 }
 
-function showScore(){
-const playerName = score_box.querySelector(".pName")
-    let ime = '<p>'+ score_board.ime +'</p>'
-    playerName.innerHTML = ime; 
-const playerScore = score_box.querySelector(".pScore")
-    let skor = '<p>'+ score_board.skor +'</p>'
-    playerScore.innerHTML = skor; 
 
-    for(let score of score_list){
-
-    }
-
-}
-var score_list = []; 
-
-var score_board = {ime:"" , skor:""};
-
-
-
-score_btn.onclick=()=>{
-
-    end_box.classList.remove("activeEnd");
-    score_box.classList.add("showScore");
-    showScore();
-}
-again_btn.onclick =()=>{
-    que_count=0;
-    home_box.classList.remove("hideHome");
-    score_box.classList.remove("showScore");
-}
 
 play_again_btn.onclick=()=>{
     end_box.classList.remove("activeEnd");
     home_box.classList.remove("hideHome");
-    
-
 }

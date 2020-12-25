@@ -332,19 +332,7 @@ opacity: 0;
  border-radius: 5%;
 
 }
-.end-box .Scoreboard{
-  align-items: center;
-  padding: 12px 12px;
-  font-size: 18px;
-  background-color: #0f0bf0c2;
-  color:#fff;
-  font-weight: 700;
-  font-family: 'DM Serif Text', serif;
-  border-radius: 5%;
-}
-.end-box .Scoreboard:hover{
-  cursor: pointer;
-}
+
 
 
 
@@ -380,47 +368,7 @@ opacity: 0;
   cursor: pointer;
 }
 
-.score-box{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
-	width: 320px;
-	height: 400px;
-    background-color: whitesmoke;
-    margin:auto;
-    border-radius: 5%;
-    padding:2rem;
-    text-align: center;
-    margin-top: 20px;
-
-opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease
-}
-
-.score-box.showScore{
-  opacity: 1;
-  z-index: 5;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.score-box .playAgain{
-  align-items: center;
-  padding: 12px 12px;
-  font-size: 18px;
-  background-color: #e0f00bc2;
-  color:#000000;
-  font-weight: 700;
-  font-family: 'DM Serif Text', serif;
-  border-radius: 5%;
- 
- }
- .score-box .playAgain:hover{
-   cursor: pointer;
- }
  
  .end-box .playAgain:hover{
   cursor: pointer;
