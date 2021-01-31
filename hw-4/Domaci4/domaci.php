@@ -2,25 +2,31 @@
 
 $connect = new mysqli('localhost', 'nemanjaas99', 'nemanjaas99', 'users');
 
-    if(!$connect){
-        echo 'Connection error: ' . mysqli_connect_error();
-    }
-
     $user = $_POST['user'];
     $user = json_decode($user,true);
+
+    $postoji = false;
+    $admin = false;
     
 
     $users = $connect->query("SELECT * FROM users");
 
     foreach($users as $row){
-      if($user["E-mail"]==$row["e-mail"]){
+      if($user["E-mail"]==$row["e-mail"] || $user["E-mail"]==$row["Username"]){
         if($user["password"]==$row["password"]){
-          echo "sve je dobro";
+          $postoji = true;
+          if($row["admin/user ID"]==1){
+            
+            $admin = true;
+
+          }
+          
+
         }
       }
     }
 
-   
+   echo json_encode(array('admin'=> $admin, 'postoji'=> $postoji));
    
 $connect->close();
 

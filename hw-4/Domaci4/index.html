@@ -55,7 +55,7 @@
       <label for="inputPassword" class="visually-hidden">Confirm password</label>
       <input type="password" id="inputPassword2" class="form-control" placeholder="Password" required><br>
 
-      <button class="w-100 btn btn-lg btn-primary" onclick="logUp()">Create account</button>
+      <button class="w-100 btn btn-lg btn-primary" onclick="signUp()">Create account</button>
       <button class="w-50 btn btn-sm btn-primary mt-3" onclick="show_signIn()" type="submit">Sing in</button>
     </form>
 
@@ -63,11 +63,104 @@
 
   </div>
 
+  <!--ADMIN PAGE-->
+
+  <div class="admin-page" id="adminID">
+    <h1>ADMIN</h1>
+    
+
+    <button class="w-100 btn btn-lg btn-primary mt-5" onclick="dodajFilm_btn()">Dodaj film</button><br>
+    <button class="w-100 btn btn-lg btn-primary" onclick="show_Azuriraj()">Azuriraj film</button><br>
+    <button class="w-100 btn btn-lg btn-primary">Prikazi filmove</button><br>
+    
+
+  
+  </div>
+
+  <!--DODAJ FILM-->
+  
+  <div class="dodaj-film" id = "dodajFilmID">
     
   
+
+  <div class="row">
+    <div class="col">
+      <p>Naslov filma:</p>
+      <input type="text" id="naslov" class="form-control" required autofocus>
+      <p>Kratak opis filma:</p>
+      <textarea type="text" id="opis" class="form-control" required autofocus></textarea>
+      <p>Zanr:</p>
+      <input type="text" id="zanr" class="form-control" required autofocus>
+      <p>Scenarista:</p>
+      <input type="text" id="scenarista" class="form-control" required autofocus>
+      <p>Reziser:</p>
+      <input type="text" id="reziser" class="form-control" required autofocus>
+    </div>
+    <div class="col">
+      <p>Producentska kuca:</p>
+    <input type="text" id="kuca" class="form-control" required autofocus>
+    <p>Lista glumaca:</p>
+    <input type="text" id="glumci" class="form-control" required autofocus>
+    <p>Godina izdanja:</p>
+    <input type="text" id="godina" class="form-control" required autofocus>
+    <p>Slika:</p>
+    <input type="text" id="slika" class="form-control" required autofocus>
+    <p>Trajanje filma:</p>
+    <input type="text" id="trajanje" class="form-control" required autofocus><br>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary mt-5" onclick="addMovie()">Dodaj film</button><br>
+  </div>
+  
+    
+
+  </div>
+
+
+  <!--AZURIRAJ FILM-->
+
+  <div class="niz" id = "nizFilmova">
+    
+
+    <!--Ovde ubacujem niz filmova-->
+
+  </div>
+<!--
+  <div class="azuriraj">
+
+
+  <div class="row">
+    <div class="col">
+      <p>Naslov filma:</p>
+      <input type="text" id="naslovE" class="form-control" required autofocus>
+      <p>Kratak opis filma:</p>
+      <textarea type="text" id="opisE" class="form-control" required autofocus></textarea>
+      <p>Zanr:</p>
+      <input type="text" id="zanrE" class="form-control" required autofocus>
+      <p>Scenarista:</p>
+      <input type="text" id="scenaristaE" class="form-control" required autofocus>
+      <p>Reziser:</p>
+      <input type="text" id="reziserE" class="form-control" required autofocus>
+    </div>
+    <div class="col">
+      <p>Producentska kuca:</p>
+    <input type="text" id="kucaE" class="form-control" required autofocus>
+    <p>Lista glumaca:</p>
+    <input type="text" id="glumciE" class="form-control" required autofocus>
+    <p>Godina izdanja:</p>
+    <input type="text" id="godinaE" class="form-control" required autofocus>
+    <p>Slika:</p>
+    <input type="text" id="slikaE" class="form-control" required autofocus>
+    <p>Trajanje filma:</p>
+    <input type="text" id="trajanjeE" class="form-control" required autofocus><br>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary mt-5" onclick="updateMovie()">Azuriraj</button><br>
+  </div>
+</div>
+    -->
+  
   <!--HOME PAGE-->
-  <!--
-  <div class="home">
+  
+  <div class="user-home" id="userHome">
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
   <div class="container-fluid">
@@ -108,7 +201,7 @@
 
 
 </div>
--->
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
