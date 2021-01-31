@@ -18,7 +18,7 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  display: inline;
+  display: none;
 
   position: absolute;
   left:50%;
@@ -119,19 +119,24 @@ body {
   font-weight: 100;
   
 }
+.container-fluid{
+  display: inline;
+  align-items: center;
+}
 
-.niz span {
+.container-fluid span {
   font-size: 25px;
   margin-left: 20px;
+  margin-top: 50px;
 
 
 }
-.niz .buttons{
+.container-fluid .buttons{
   margin-left: 500px;
   padding: 10px;
 
 }
-.niz button{
+.container-fluid button{
   padding: 10px;
   margin: 10px;
 }
