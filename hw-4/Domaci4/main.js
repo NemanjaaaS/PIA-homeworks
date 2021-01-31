@@ -731,3 +731,8 @@ function logOut(){
     document.getElementById("inputPassword") = "";
 
 }
+
+function adminLogOut(){
+    signID.style.display = "inline";
+    adminID.style.display = "none";
+}
