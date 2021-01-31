@@ -1,9 +1,11 @@
 signID2.style.display = "none";
-adminID.style.display = "inline";
+adminID.style.display = "none";
 userHome.style.display = "none";
-signID.style.display = "none";
+signID.style.display = "inline";
 dodajFilmID.style.display = "none";
 nizFilmova.style.display = "none";
+filmS.style.display = "none";
+
 
 function show_signUp(){
     signID2.style.display = "inline";
@@ -45,6 +47,7 @@ function signIn(){
                 else{
                     signID.style.display = "none";
                     userHome.style.display = "inline";
+                    prikaziZaUsera();
                     
                 }
             }
@@ -201,7 +204,7 @@ function izmeni(movie){
             console.log(answer)
             
             answer = JSON.parse(answer);
-           movieId = answer['ID'];
+            movieId = answer['ID'];
             const izmeniFilm = document.getElementById("izmeniFilm");
             izmeniFilm.innerHTML = `<div class="row">
             <div class="col">
@@ -272,5 +275,459 @@ function editMovie(){
 adminID.style.display = "inline";
 izmeniFilm.style.display = "none";
 
+
+}
+
+
+
+
+function prikaziZaUsera(){
+    let data;
+    $.ajax ({
+    url: 'NaslovSlika.php',
+    type: 'post',
+    data: {user: data},
+    success: function(answer){
+        const karticaFilm = document.getElementById("karticeFimovi");
+        console.log(answer)
+        
+        let niz= JSON.parse(answer);
+        
+            
+            
+            
+
+
+            for(let film of niz){
+                film = JSON.parse(film);
+                
+                
+            karticaFilm.innerHTML += `<div class = "slike"> <div class="col">
+<div class="card shadow-sm">
+  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+
+  <div class="card-body">
+  <h3>`+film['naslov']+`</h3>
+    <p class="card-text">`+film['opis']+`</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">Prikazi</button>
+      
+      </div>
+      <small class="text-muted">`+film['trajanje']+`</small>
+    </div>
+  </div>
+</div>
+</div>
+</div>`
+            
+
+        }
+    }
+});
+}
+
+
+
+
+
+
+
+function Akcija(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Action"||film['zanr'] == "action"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+
+function Adventure(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Adventure"||film['zanr'] == "adventure"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+function Mystery(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Mystery"||film['zanr'] == "mystery"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+function Horror(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Horror"||film['zanr'] == "horror"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+
+function Comedy(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Comedy"||film['zanr'] == "comedy"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+
+function Romance(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Romance"||film['zanr'] == "romance"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+
+function Anime(){
+    let data;
+    $.ajax ({
+        url: 'NaslovSlika.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            let niz= JSON.parse(answer);
+            console.log(niz)
+            const zanrovi = document.getElementById("zanrovi");
+            zanrovi.innerHTML = "";
+            for(let film of niz){
+                film = JSON.parse(film);
+                if(film['zanr'] == "Anime"||film['zanr'] == "anime"){
+                    zanrovi.innerHTML += `<div class = "slike"> <div class="col">
+                        <div class="card shadow-sm">
+                          <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="`+film['slika']+`"></img>
+                        
+                          <div class="card-body">
+                          <h3>`+film['naslov']+`</h3>
+                            <p class="card-text">`+film['opis']+`</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "prikaziFilm('`+film['naslov']+`')">View</button>
+                                
+                              </div>
+                              <small class="text-muted">`+film['trajanje']+`</small>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>`;
+
+                }
+            }
+
+        }
+    });
+    karticeFimovi.style.display="none";
+
+}
+
+function prikaziFilm(movie){
+    
+    let data = JSON.stringify({
+        "naslov" : movie
+        
+
+    });
+
+    
+    $.ajax ({
+        url: 'edit.php',
+        type: 'post',
+        data: {user: data},
+        success: function(answer){
+            
+            console.log(answer)
+            
+            answer = JSON.parse(answer);
+            
+            const izmeniFilm = document.getElementById("filmS");
+            izmeniFilm.innerHTML = `<h1 class="mt-10 ">`+answer['naslov']+`</h1>
+            <div class="row mt-5">
+              <div class="col">
+              <img src="`+answer['slika']+`">
+              <p>`+answer['glumci']+`</p>
+              <p>`+answer['reziser']+`</p>
+              <p>`+answer['scenarista']+`</p>
+              <p>`+answer['kuca']+`</p>
+            </div>
+            <div class="col">
+              <p>`+answer['opis']+`</p>
+              <p>`+answer['godina']+`</p>
+              <p>`+answer['ocena']+`</p>
+              
+              <input type="text" id="oceni">
+              <button class="btn btn-primary" id="ocenaDugme">Submit</button>
+              
+            </div>
+            </div>`
+
+
+            
+        }
+});
+filmS.style.display = "inline";
+karticeID.style.display = "none";
+
+   
+}
+
+function nadjiPoNaslovu(){
+    let naziv = document.getElementById("search").value;
+
+        
+    
+    
+    
+        let data = JSON.stringify({
+            "naslov" : naziv
+            
+    
+        });
+        $.ajax ({
+            url: 'getMovies.php',
+            type: 'post',
+            data: {user: data},
+            success: function(answer){
+                
+                let niz= JSON.parse(answer);
+                console.log(niz);
+
+                for(let film of niz){
+
+                if(naziv== film){
+                    prikaziFilm(naziv);
+                }
+            }
+                
+    
+    
+}
+    
+            
+    })
+    
+    }
+function showHome(){
+    filmS.style.display = "none";
+    karticeFimovi.style.display="inline";
+    userHome.style.display = "inline";
+}
+
+function logOut(){
+    userHome.style.display = "none";
+    signID.style.display = "inline";
+    document.getElementById("inputPassword") = "";
 
 }

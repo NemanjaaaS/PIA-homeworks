@@ -15,16 +15,14 @@
    
     <div class="form-signin" id ="signID">
       
-        
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <h1>IMDB</h1>
+        <h4 class="h3 mb-3 fw-normal">Sign in</h4>
         <label for="inputEmail" class="visually-hidden">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email or username" required autofocus>
         <label for="inputPassword" class="visually-hidden">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
+          
         </div>
         <button class="w-100 btn btn-lg btn-primary" onclick="signIn()" type="submit">Sign in</button>
       
@@ -130,83 +128,91 @@
 
 
   </div>
-<!--
-  <div class="azuriraj">
 
-
-  <div class="row">
-    <div class="col">
-      <p>Naslov filma:</p>
-      <input type="text" id="naslovE" class="form-control" required autofocus>
-      <p>Kratak opis filma:</p>
-      <textarea type="text" id="opisE" class="form-control" required autofocus></textarea>
-      <p>Zanr:</p>
-      <input type="text" id="zanrE" class="form-control" required autofocus>
-      <p>Scenarista:</p>
-      <input type="text" id="scenaristaE" class="form-control" required autofocus>
-      <p>Reziser:</p>
-      <input type="text" id="reziserE" class="form-control" required autofocus>
-    </div>
-    <div class="col">
-      <p>Producentska kuca:</p>
-    <input type="text" id="kucaE" class="form-control" required autofocus>
-    <p>Lista glumaca:</p>
-    <input type="text" id="glumciE" class="form-control" required autofocus>
-    <p>Godina izdanja:</p>
-    <input type="text" id="godinaE" class="form-control" required autofocus>
-    <p>Slika:</p>
-    <input type="text" id="slikaE" class="form-control" required autofocus>
-    <p>Trajanje filma:</p>
-    <input type="text" id="trajanjeE" class="form-control" required autofocus><br>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary mt-5" onclick="updateMovie()">Azuriraj</button><br>
-  </div>
-</div>
-    -->
   
   <!--HOME PAGE-->
   
-  <div class="user-home" id="userHome">
+<div class="user-home" id="userHome">
 
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning">
+  
+    
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <button class="btn btn-outline-primary" type="submit" onclick="showHome()">Home</button>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
+      
+
+        
+        <li class="nav-item dropdown btn">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Zanrovi
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><button class="dropdown-item" onclick="Akcija()" >Action</button></li>
+            <li><button class="dropdown-item" onclick="Adventure()">Advanture</button></li>
+            <li><button class="dropdown-item" onclick="Mystery()">Mystery</button></li>
+            <li><button class="dropdown-item" onclick="Comedy()">Comedy</button></li>
+            <li><button class="dropdown-item" onclick="Romance()">Romance</button></li>
+            <li><button class="dropdown-item" onclick="Horror()">Horror</button></li>
+            <li><button class="dropdown-item" onclick="Anime()">Anime</button></li>
+            
+            
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      
+        <input class="form-control me-2" id = "search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit" onclick="nadjiPoNaslovu()">Search</button>
+        
+      
+      <li class="nav-item">
+        <button class="btn btn-outline-warning" onclick="logOut()">Log out</button>
+      </li>
+    </div>
+  
+  </nav>
+
+  <div class="album py-5 bg-light" id="karticeID">
+  
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id = "karticeFimovi">
+      <!--OVDE DODAJEM KARTICE SA FIMOVIMA-->
+    </div>
+    </div>
+
+  
+  
+
+
+
+  <!--KAD SE KLIKNE SEARCH ili neki film-->
+  <div class="film text-center mt-5" id="filmS">
+  
+  
+
+  </div>
+
+
+  <div class="album py-5 bg-light">
+    
+      <!--KAD SE KLIKNE NA NEKO DUGME ZA ZANR-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="zanrovi">
+
+      
+
+
     </div>
   </div>
-</nav>
-
-
 </div>
+
+
+
+
+
+
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -18,7 +18,7 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  display: none;
+
 
   position: absolute;
   left:50%;
@@ -139,6 +139,32 @@ body {
 .container-fluid button{
   padding: 10px;
   margin: 10px;
+}
+
+.slike{
+  margin-top: 50px;
+}
+
+#filmS{
+  display: inline;
+  background-color: rgb(233, 233, 233);
+  margin-top: 130px;
+}
+#oceni{
+  width: 40px;
+}
+
+#ocenaDugme{
+  width: 50px;
+  height: 30px;
+  font-size: 10px;
+  text-align: center;
+}
+
+#filmS h1{
+  margin-top: 130px;
+  color:red;
+  font-size: 30px;
 }
 
 
