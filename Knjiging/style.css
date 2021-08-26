@@ -1,0 +1,356 @@
+body{
+  background-color: #eee;
+}
+
+
+#modal{
+  z-index:10000;
+  background-color: #0003;
+  position:fixed;
+  overflow: scroll;
+  left:0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+
+  
+
+}
+#rezervacijaMod{
+  text-align: center;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+
+  background-color: whitesmoke;
+  margin:auto;
+  border-radius: 20px;
+  padding:2rem;
+  margin-top: 30px;
+}
+
+.form-signin {
+  text-align: center;
+  max-width: 330px;
+  padding: 15px;
+
+
+	width: 320px;
+	height: 400px;
+    background-color: whitesmoke;
+    margin:auto;
+    border-radius: 5%;
+    padding:2rem;
+    
+    margin-top: 20px;
+    
+
+
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%); 
+}
+#btnClsLogIn{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  transform:translate(110px,-180px);
+
+}
+
+
+#btnClsReg{
+  position: absolute;
+  left:50%;
+  top:10px;
+  transform:translate(-50%,-50%);
+  transform:translateX(130px);
+
+}
+#btnClsRez{
+  position: absolute;
+  left:50%;
+  top:10px;
+  transform:translate(-50%,-50%);
+  transform:translateX(200px);
+
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.signUp{
+  text-align: center;
+  position: absolute;
+  left:50%;
+  top:40px;
+  transform:translate(-50%,0%);
+
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+
+  background-color: whitesmoke;
+  margin:auto;
+  border-radius: 20px;
+  padding:2rem;
+  margin-top: 30px;
+
+
+}
+
+.signUp input[type="email"]{
+
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#search{
+  
+  margin: auto;
+  width: 80%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+}
+#schText{
+  flex-grow: 6;
+}
+#schDateBg{
+  flex-grow: 4;
+
+}
+#schDateEnd{
+  flex-grow: 4;
+
+}
+#schNum{
+  flex-grow: 2;
+
+}
+
+#search > input{
+  border:1px solid black;
+}
+#karticeID{
+  margin-top: 100px;
+}
+#prikazSmestaja{
+  margin: 0px 0px;
+  min-width: 700px;
+  min-height: none ;
+}
+.opisSmestaja{
+ max-height: 200px;
+}
+#divSlika{
+  position:relative;
+  width: 100%;
+}
+#slikaID{
+  width: 100%;
+}
+#prevBtn{
+  border:none;
+  position:absolute;
+  left:10px;
+  top:50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+
+}
+#nextBtn{
+  border:none;
+  position:absolute;
+  top:50%;
+  right:10px;
+  transform: translateY(-50%);
+  background-color: transparent;
+}
+
+#zvezdaId{
+  text-align: right;
+}
+#container{
+  margin:100px;
+  padding: 30px;
+  background-color: white;
+  min-width: 750px;
+}
+table{
+  width: 40px;
+
+}
+table td{
+  padding:7px;
+}
+#podaciSmestaj{
+  display: flex;
+  flex-direction: column;
+}
+#red1{
+  flex-grow: 10;
+}
+#red2{
+  flex-grow: 3;
+  align-items: center;
+}
+#opis{
+  margin: 20px;
+}
+
+
+.content-item {
+    padding:30px 0;
+	background-color:#FFFFFF;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height:100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	line-height:45px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h3 {
+	font-weight:400;
+	font-size:20px;
+	color:#555555;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#FFFFFF;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:0 20px;
+}
+
+.grey .content-headline h2 {
+	background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+	font-size:14px;
+	color:#AAAAAA;
+	display:block;
+}
+
+
+#comments {
+    
+	background-color:#FFFFFF;
+
+  
+}
+
+#comments form {
+	margin-bottom:30px;
+}
+
+#comments .btn {
+	margin-top:7px;
+}
+
+#comments form fieldset {
+	clear:both;
+}
+
+#comments form textarea {
+	height:100px;
+}
+
+#comments .media {
+	padding:20px;
+	margin:10px;
+  background-color: #eee;
+  border-radius: 10px;
+  
+}
+
+#comments .media > .pull-left {
+    margin-right:20px;
+}
+
+
+#comments .media h4 {
+	margin:0 0 10px;
+}
+
+#comments .media h4 span {
+	font-size:14px;
+	float:right;
+	color:#999999;
+}
+
+#comments .media p {
+	margin-bottom:15px;
+	text-align:justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
